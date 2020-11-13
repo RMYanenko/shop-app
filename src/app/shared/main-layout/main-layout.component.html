@@ -1,1 +1,22 @@
-<p>main-layout works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <h2 class="">
+    <a class="navbar-brand" [routerLink]="['/']">Electro-shop</a>
+  </h2>
+  <div class="collapse navbar-collapse justify-content-end">
+    <ul class="navbar-nav">
+      <li routerLinkActive="active" class="nav-item">
+        <a href="" class="nav-link">Phone</a>
+      </li>
+      <li routerLinkActive="active" class="nav-item">
+        <a href="" class="nav-link">Tablet</a>
+      </li>
+      <li routerLinkActive="active" class="nav-item">
+        <a href="" class="nav-link">Laptop</a>
+      </li>
+      <li routerLinkActive="active" class="nav-item">
+        <a [routerLink]="['/cart']" class="nav-link">Cart</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
