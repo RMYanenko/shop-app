@@ -8,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginPageComponent implements OnInit {
   form: FormGroup;
+  submitted = false;
 
   constructor() { }
 
@@ -19,7 +20,15 @@ export class LoginPageComponent implements OnInit {
   }
 
   submit(): void {
+    if (this.form.invalid) {
+      console.log(this.form);
+    }
+    this.submitted = true;
 
+    const user = {
+      email: this.form.value.email,
+      password: this.form.value.password
+    };
   }
 
 }
